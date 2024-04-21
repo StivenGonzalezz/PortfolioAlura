@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+:root{
+    --primaryColor: #414040;
+    --lowPrimaryColor: #c0c0c0;
+
+}
+
+
+
+
+.header {
+    background-color: var(--primaryColor);
+    height: 2rem;
+}
+.nav {
+    height: 100%;
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.nombre {
+}
+.laber_hamburguesa {
+}
+.list_icon {
+}
+.ulLinks {
+}
+.liLinks {
+}
+.link {
+}

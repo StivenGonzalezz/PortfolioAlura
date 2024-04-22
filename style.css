@@ -1,36 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
 :root{
-    --primaryColor: #414040;
-    --lowPrimaryColor: #c0c0c0;
+    --primaryColor: #202020;
+    --lowPrimaryColor: #414141;
+    --PrimaryColorText: #b8b7b7;
+    --PrimaryColorTextHover:rgb(201, 189, 189)6;
 
 }
 
-
-
+html{
+    font-family: "signika";
+}
 
 .header {
     background-color: var(--primaryColor);
-    height: 2rem;
+    height: 3rem;
 }
 .nav {
     height: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 2rem;
 }
-a{
+.nombre{
     text-decoration: none;
+    color: var(--PrimaryColorText);
+    font-weight: 600;
+    font-size: 1.5em;
+    height: auto;
 }
+
+.list_icon{
+    cursor: pointer;
+    color: var(--PrimaryColorText);
+}
+
 ul{
     list-style: none;
 }
-.nombre {
+
+.ulLinks{
+    background-color: var(--lowPrimaryColor);
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s;
 }
-.laber_hamburguesa {
+
+.menu:checked + .ulLinks{
+    height: calc(100vh - 3rem);  
 }
-.list_icon {
+
+.link{
+    text-decoration: none;
 }
-.ulLinks {
+
+.liLinks{
+    font-size: 2.5em;
 }
-.liLinks {
+
+.link{
+    color: var(--PrimaryColorText);
+    transition: 0.5s all;
 }
-.link {
+
+.menu{
+    display: none;
+}
+
+@media(min-width:1000px){
+    .label_hamburguesa{
+        display: none;
+    }
+
+    .ulLinks{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 1rem;
+        background-color: var(--primaryColor);
+        font-size: 0.7em;
+        color: var(--PrimaryColorText);
+
+    }
+
+    .link{
+        font-weight: 600;
+    }
+
 }

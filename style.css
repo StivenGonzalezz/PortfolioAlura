@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Signika:wght@300..700&display=swap');
 :root{
     --primaryColor: #202020;
     --lowPrimaryColor: #414141;
@@ -9,6 +10,9 @@
 
 html{
     font-family: "signika";
+    font-family: "IBM Plex Sans", sans-serif;
+    background-color: black;
+    color: var(--PrimaryColorText)
 }
 
 .header {
@@ -22,7 +26,7 @@ html{
     align-items: center;
     flex-wrap: wrap;
     position: relative;
-    padding: 0 2rem;
+    padding: 0 5%;
 }
 .nombre{
     text-decoration: none;
@@ -42,7 +46,7 @@ ul{
 }
 
 .ulLinks{
-    background-color: var(--lowPrimaryColor);
+    backdrop-filter: blur(10px);
     position: absolute;
     top: 3rem;
     left: 0;
@@ -99,4 +103,33 @@ ul{
         font-weight: 600;
     }
 
+}
+
+/* ---------------------- MAIN ----------------------------------------*/
+
+.main{
+    margin: 5% 10%;
+    border-right: 1px grey solid;
+
+}
+
+.about{
+    top: 3rem;
+}
+
+.tag{
+    font-weight: bold;
+    text-align: end;
+    padding-bottom: 5%;
+}
+
+.aboutTextVanish{
+    font-size: 1.5em;
+    padding-bottom: 5%;
+}
+
+.aboutText{
+    padding-right: 2%;
+    line-height: 1.5em;
+    padding-bottom: 15%;
 }

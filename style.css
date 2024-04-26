@@ -65,6 +65,7 @@ ul{
     height: calc(100vh - 3rem);
 }
 
+
 .link{
     text-decoration: none;
 }
@@ -113,6 +114,11 @@ ul{
 
 }
 
+.nombre{
+    font-size: 1.3em;
+    font-weight: bold
+}
+
 .about{
     top: 3rem;
 }
@@ -123,11 +129,50 @@ ul{
     padding-bottom: 5%;
 }
 
+
 .aboutTextVanish{
     font-size: 1.5em;
-    padding-bottom: 5%;
     font-weight: bold;
 }
+
+.dynamicTexts{
+    font-size: 1.5em;
+    padding-bottom: 10%;
+    font-weight: bold;
+    height: 0.3em;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    animation: slide 10s steps(4) infinite;
+}
+
+.dynamicTexts li span{
+    position: relative;
+}
+
+.dynamicTexts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-left: 2px solid var(--PrimaryColorText);
+    animation: typing 3s steps(15) infinite;
+}
+
+.neonText {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px rgb(67, 68, 68),
+        0 0 82px rgb(67, 68, 68),
+        0 0 92px rgb(67, 68, 68),
+        0 0 102px rgb(67, 68, 68),
+        0 0 151px rgb(67, 68, 68);
+  }
 
 .aboutText{
     padding-right: 2%;
@@ -177,7 +222,9 @@ a{
 }
 
 /* ---------------------- SKILLS ----------------------------------------*/
-
+.skills{
+    padding: 1rem 0 2rem 0;
+}
 .scroller{
     max-width: 90%;
 }
@@ -204,12 +251,35 @@ a{
     flex-wrap: nowrap;
     animation: scroll 20s linear infinite;
 }
+
+/* ---------------------- CONTACT ----------------------------------------*/
+
+.contacIcons{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contactImg{
+    height: 3rem;
+    filter: grayscale(100%);
+}
+
  
 
 @keyframes scroll {
 
     to{
         transform:  translate(-100%);
+    }
+    
+}
+
+@keyframes typing {
+
+    100%{
+        left: 100%;
+        margin: 0 -30px 0 20px;
     }
     
 }

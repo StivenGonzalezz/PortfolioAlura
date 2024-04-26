@@ -62,7 +62,7 @@ ul{
 }
 
 .menu:checked + .ulLinks{
-    height: calc(100vh - 3rem);  
+    height: calc(100vh - 3rem);
 }
 
 .link{
@@ -126,6 +126,7 @@ ul{
 .aboutTextVanish{
     font-size: 1.5em;
     padding-bottom: 5%;
+    font-weight: bold;
 }
 
 .aboutText{
@@ -162,6 +163,17 @@ ul{
 
 .icon {
     height: 2vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+.goProject{
+    text-decoration: none;
+    color: var(--PrimaryColorText);
+    font-size: 1.5em;
+    text-align: end;
 }
 
 /* ---------------------- SKILLS ----------------------------------------*/

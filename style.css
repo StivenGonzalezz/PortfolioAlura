@@ -36,75 +36,11 @@ html{
     height: auto;
 }
 
-.list_icon{
-    cursor: pointer;
-    color: var(--PrimaryColorText);
-}
 
 ul{
     list-style: none;
 }
 
-.ulLinks{
-    backdrop-filter: blur(10px);
-    position: absolute;
-    top: 3rem;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    height: 0;
-    overflow: hidden;
-    transition: all .5s;
-}
-
-.menu:checked + .ulLinks{
-    height: calc(100vh - 3rem);
-}
-
-
-.link{
-    text-decoration: none;
-}
-
-.liLinks{
-    font-size: 2.5em;
-}
-
-.link{
-    color: var(--PrimaryColorText);
-    transition: 0.5s all;
-}
-
-.menu{
-    display: none;
-}
-
-@media(min-width:1000px){
-    .label_hamburguesa{
-        display: none;
-    }
-
-    .ulLinks{
-        position: static;
-        width: auto;
-        height: auto;
-        flex-direction: row;
-        gap: 1rem;
-        background-color: var(--primaryColor);
-        font-size: 0.7em;
-        color: var(--PrimaryColorText);
-
-    }
-
-    .link{
-        font-weight: 600;
-    }
-
-}
 
 /* ---------------------- MAIN ----------------------------------------*/
 
@@ -212,12 +148,15 @@ ul{
 
 a{
     text-decoration: none;
+    display: inline-flex;
+    margin-left: 80%;
 }
 
 .goProject{
     text-decoration: none;
     color: var(--PrimaryColorText);
     font-size: 1.5em;
+    width: 100%;
     text-align: end;
 }
 
@@ -280,6 +219,72 @@ a{
     100%{
         left: 100%;
         margin: 0 -30px 0 20px;
+    }
+    
+}
+
+
+@media(min-width:1000px){
+
+    .nombre{
+        font-size: 2em;
+    }
+
+    .nav{
+        padding: 0 25%;
+    }
+
+    .main{
+    margin: 5% 25%;
+    }
+
+    .tag{
+        padding-bottom: 1rem;
+        font-size: 1.5em;
+    }
+
+    .aboutTextVanish{
+
+        font-size: 2.5em;
+
+    }
+
+    .aboutText{
+        padding-bottom: 5%;
+    }
+
+    h3{
+        width: 100%;
+        font-size: 1em;
+    }
+
+    span {
+        font-size: 2em;
+    }
+
+    p{
+        font-size: 1.5em;
+    }
+
+    .project{
+        padding-bottom: 10%;
+    }
+
+    .icon {
+        height: 3.4vh;
+    }
+
+    .goProject{
+        font-weight: bolder;
+    }
+
+    a{
+    margin-left: 90%;
+    }
+
+    .contacIcons {
+        justify-content: space-around;
+        padding-right: 10%;
     }
     
 }
